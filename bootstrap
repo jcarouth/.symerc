@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo apt-get install -y vim curl tree unzip zip
+
+cd $(dirname $0)
+
+git submodule init
+git submodule update
+
+cp .vimrc ~
+cp .gitconfig ~
+cp .tmux.conf ~
+
+sudo apt-get install -y bundler
